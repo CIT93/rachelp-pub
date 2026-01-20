@@ -3,8 +3,8 @@ console.log('Hello from app.js! Your JavaScript is connected and running!');
 // --- Part 1: Select HTML Elements ----
 // We use document.getElementById() to get a reference to an element by its unique ID.
 // We store these references in 'const' variables because the elements themselves won't change.
-const messageDisplayElement = document.getElementById('output-message');
-const updateButton = document.getElementById('update-button');
+const totalDisplayElement = document.getElementById('total-display');
+const addItemBtn = document.getElementById('add-item-btn');
 
 //These variables will change as the user interacts with the page.
 let userName = 'Rachel';
@@ -18,22 +18,22 @@ const handleButtonClick = function() {
     // Increase clickCount by 1 each time the button is clicked
     clickCount += 1;
     // Template strings (literal) to easily combine our variables and text into one message
-    let message = `Hello, ${userName}! You have clicked the button ${clickCount} time(s).`;
+    let total = `Hello, ${userName}! You have clicked the button ${clickCount} time(s).`;
 
     // This is basic decision-making in JavaScript!
     // Use a simple 'if' statement to make our page react differently based on clickCount.
     if(clickCount >= 5) {
         // We can even change the style of an HTML element directly with JavaScript!
-        message += ' WOW, you are a super clicker!';
+        total += ' WOW, you are a super clicker!';
         // Change text color
-        messageDisplayElement.style.color = 'blue';
+        totalDisplayElement.style.color = 'blue';
     } else {
-        messageDisplayElement.style.color = '#009933';
+        totalDisplayElement.style.color = '#009933';
     };
     
     // Update the text content of our paragraph element on the page.
     // This is how JavaScript makes changes visible on the web page!
-    messageDisplayElement.textContent = message;
+    totalDisplayElement.textContent = total;
 
     console.log(`Button Clicked! Current click count: ${clickCount}`);
 };
@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', function(){
     // The 'DOMContentLoaded' event is perfect for this. It fires when the HTML document is ready.
     console.log('DOM fully loaded and parsed, app is ready for interaction');
 
-    // Attach an event listener to our 'updateButton'.
-    // When 'updateButton' receives a 'click' event, the 'handleButtonClick' function will execute.
-    updateButton.addEventListener('click', handleButtonClick);
+    // Attach an event listener to our 'addItemBtn'.
+    // When 'addItemBtn' receives a 'click' event, the 'handleButtonClick' function will execute.
+    addItemBtn.addEventListener('click', handleButtonClick);
 
-    messageDisplayElement.textContent = `Welcome, ${userName}! Click the button below to start counting.`;
+    totalDisplayElement.textContent = `Welcome, ${userName}! Click the button below to start counting.`;
 
 });
