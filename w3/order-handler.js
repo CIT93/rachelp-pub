@@ -13,7 +13,6 @@ const sizeRadioButtons = orderForm.querySelectorAll('input[name="size"]');
 const getSelectedRadioValue = function(radioButtons) {
     for (const radio of radioButtons) {
         if (radio.checked) {
-            console.log(`${radio.value} is ${radio.checked}`);
             return radio.value;
         }
     }
