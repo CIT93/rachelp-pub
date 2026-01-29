@@ -36,7 +36,7 @@ const handleButtonClick = function() {
     // This is how JavaScript makes changes visible on the web page!
     totalDisplayElement.textContent = total;
 
-    console.log(`Button Clicked! Current click count: ${totalCost}`);
+    console.log(`Button Clicked! Current total: ${totalCost}`);
 };
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -48,7 +48,4 @@ document.addEventListener('DOMContentLoaded', function(){
     // Attach an event listener to our 'addItemBtn'.
     // When 'addItemBtn' receives a 'click' event, the 'handleButtonClick' function will execute.
     addItemBtn.addEventListener('click', handleButtonClick);
-
-    totalDisplayElement.textContent = `Welcome! Click the button below to start counting.`;
-
 });
