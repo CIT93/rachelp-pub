@@ -10,9 +10,5 @@ export const calculateTotal = function(data) {
         return {
             totalPrice: parseInt(data.qty) * shirtPrice
         };
-    } else {
-        return {
-            totalPrice: null
-        };
     };
 };
