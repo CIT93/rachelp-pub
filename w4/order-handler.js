@@ -21,13 +21,12 @@ const getSelectedRadioValue = function(radioButtons) {
 // 3. Export the Main Function
 // Create and export a function
 export const getOrderInputs = function() {
-    console.log('getOrderInputs is running...');
+    // console.log('getOrderInputs is running...');
     const orderFormSelections = {
         qty: parseInt(qtyInput.value),
         giftWrap: giftWrapCheckbox.checked,
         size: getSelectedRadioValue(sizeRadioButtons)
     };
-
-    console.log('getOrderInputs is returning...');
+    // console.log('getOrderInputs is returning...');
     return orderFormSelections;
 };
